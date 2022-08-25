@@ -1,0 +1,16 @@
+body {
+  margin: 10px;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main img {
+  width: 100%;
+}
