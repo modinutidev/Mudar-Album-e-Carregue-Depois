@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mudar Album e Caregar Depois</title>
+    <title>Carregar Depois</title>
     <link rel="icon" href="#" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -59,25 +59,25 @@
         },
       ];
 
-      function createImg(imagem) {
+      function createImg(image) {
         const img = document.createElement("img");
-        img.src = imagem.src;
-        img.alt = imagem.alt;
-        img.srcset = imagem.srcset;
+        img.src = image.src;
+        img.alt = image.alt;
+        img.srcset = image.srcset;
         return img;
       }
 
-      function writeAlbum(album) {
+      function writeAlbum(album, images, container) {
         images.forEach((item) => {
           if (item.album === album) {
-            main.append(createImg(item));
+            container.append(createImg(item));
           }
         });
       }
 
       function switchAlbum(album) {
         main.innerHTML = "";
-        writeAlbum(album);
+        writeAlbum(album, images, main);
       }
     </script>
   </body>
